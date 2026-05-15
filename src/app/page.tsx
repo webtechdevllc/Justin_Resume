@@ -30,7 +30,7 @@ const resume = {
       focus: 'Computer Science',
     },
     {
-      school: 'North West Iowa Community College',
+      school: 'Northwest Iowa Community College',
       focus: 'Programmable Logic Controller Programming',
     },
   ],
@@ -41,8 +41,8 @@ const resume = {
       dates: '2025 – 2026',
       role: 'Applications Programmer',
       highlights: [
-        'Design Human Machine Interface and program Programmable Logic Controller for industrial clients.',
-        'Be part of a team, solve problems, meet with clients and come up with solutions to problems.',
+        'Design human-machine interfaces (HMI) and program programmable logic controllers (PLCs) for industrial clients.',
+        'Work as part of a team, solve problems, meet with clients, and develop solutions.',
       ],
     },
     {
@@ -50,16 +50,16 @@ const resume = {
       location: 'Sioux Falls, South Dakota',
       dates: '2024 – 2026',
       role: 'Software Developer',
-      highlights: ['Building website, applications and software for clients.'],
+      highlights: ['Build websites, applications, and software for clients.'],
     },
     {
-      company: 'Tri State Ag',
+      company: 'Tri-State Ag',
       location: 'Hull, Iowa',
       dates: '2018 – 2024',
       role: 'Farm Hand',
       highlights: [
         'Shop/equipment maintenance, driving truck, fertilizing, hauling seed, planting.',
-        'Building grain bins and shiver systems, digging and building concrete foundations for grain bins.',
+        'Build grain bins and auger systems; dig and pour concrete foundations for grain bins.',
       ],
     },
   ],
@@ -67,11 +67,11 @@ const resume = {
     {
       organization: 'Wallball and a Bible',
       activity: 'We do a workout and devotional with the inmates at Minnehaha County Jail every week.',
-      dates: '2026 - prestent',
+      dates: '2026 – Present',
     },
     {
       organization: 'Connection Church',
-      activity: 'I serve as a volunteer at my local church, preparing facilities and adutorium for our geusts.',
+      activity: 'I serve as a volunteer at my local church, preparing facilities and the auditorium for our guests.',
       dates: '2024 – Present',
     },
   ],
