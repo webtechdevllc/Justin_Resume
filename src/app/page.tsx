@@ -18,6 +18,8 @@ const resume = {
     email: 'justweber951@gmail.com',
     emailHref: 'mailto:justweber951@gmail.com',
     location: 'Sioux Falls, SD area',
+    website: 'webtechdev.io',
+    websiteHref: 'https://www.webtechdev.io/',
   },
   profile: [
     'Hard-working and passionate professional seeking a job with True North Feeds. Driven and team-oriented.',
@@ -63,6 +65,20 @@ const resume = {
       ],
     },
   ],
+  sideBusiness: {
+    name: 'WebTech',
+    url: 'https://www.webtechdev.io/',
+    urlLabel: 'webtechdev.io',
+    role: 'Owner',
+    dates: '2026 – Present',
+    location: 'Sioux Falls, SD area',
+    summary:
+      'I run my own software development business on the side, taking on client websites, web apps, and custom software gigs.',
+    highlights: [
+      'Build websites, web applications, and custom software for clients.',
+      'Work with clients from idea through launch on independent side projects.',
+    ],
+  },
   communityService: [
     {
       organization: 'Wallball and a Bible',
@@ -171,9 +187,34 @@ function IconPin() {
   )
 }
 
+function IconGlobe() {
+  return (
+    <svg
+      className="size-5 shrink-0"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      aria-hidden
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"
+      />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3.6 9h16.8M3.6 15h16.8M12 3c2.5 3 3.75 6 3.75 9S14.5 18 12 21c-2.5-3-3.75-6-3.75-9S9.5 6 12 3Z"
+      />
+    </svg>
+  )
+}
+
 const navItems = [
   { id: 'profile', label: 'Profile' },
   { id: 'experience', label: 'Experience' },
+  { id: 'business', label: 'Business' },
   { id: 'education', label: 'Education' },
   { id: 'community-service', label: 'Service' },
   { id: 'recommendation', label: 'Reference' },
@@ -253,6 +294,17 @@ export default function Home() {
                   <IconPin />
                   {resume.contact.location}
                 </li>
+                <li>
+                  <a
+                    href={resume.contact.websiteHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg bg-white/10 px-3 py-2 text-sm font-medium transition hover:bg-white/20"
+                  >
+                    <IconGlobe />
+                    {resume.contact.website}
+                  </a>
+                </li>
               </ul>
             </div>
             <div className="mx-auto w-full max-w-xs shrink-0 lg:mx-0 lg:max-w-70">
@@ -314,6 +366,38 @@ export default function Home() {
                   </li>
                 ))}
               </ol>
+            </section>
+
+            <section id="business" className="scroll-mt-24">
+              <SectionHeading>Independent Business</SectionHeading>
+              <article className="relative mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm print:break-inside-avoid print:shadow-none">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 className="font-display text-xl font-bold text-slate-900">
+                    {resume.sideBusiness.name}
+                  </h3>
+                  <time className="text-sm font-semibold text-blue-800">
+                    {resume.sideBusiness.dates}
+                  </time>
+                </div>
+                <p className="mt-1 text-sm font-medium text-slate-500">
+                  {resume.sideBusiness.role} · {resume.sideBusiness.location}
+                </p>
+                <p className="mt-4 text-slate-700">{resume.sideBusiness.summary}</p>
+                <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-700">
+                  {resume.sideBusiness.highlights.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+                <a
+                  href={resume.sideBusiness.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex items-center gap-2 rounded-lg bg-blue-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-800 print:bg-transparent print:px-0 print:py-0 print:text-blue-800 print:underline"
+                >
+                  <IconGlobe />
+                  {resume.sideBusiness.urlLabel}
+                </a>
+              </article>
             </section>
 
             <section id="education" className="scroll-mt-24">
